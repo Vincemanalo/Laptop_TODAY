@@ -41,6 +41,26 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  //INFO MODALS
+  // Open Modal
+function openModal() {
+  document.getElementById("infoModal").style.display = "block";
+}
+
+// Close Modal
+function closeModal() {
+  document.getElementById("infoModal").style.display = "none";
+}
+
+// Close modal when clicking outside the modal content
+window.onclick = function(event) {
+  var modal = document.getElementById("infoModal");
+  if (event.target === modal) {
+      modal.style.display = "none";
+  }
+};
+
+
   //Edit and Delete of the Table
 
   function editRow(button) {

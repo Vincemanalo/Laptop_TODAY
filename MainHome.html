@@ -67,45 +67,73 @@
 
   <main id="main-content">
     <div class="box-container">
-      <input type="checkbox" id="toggleInfo" hidden>
-
-      <div class="info-overlay"></div>
-      <div class="info-page">
-        <h2>Small Page</h2>
-        <p>This is the small page content.</p>
-      </div>
-
-      <div>
-        <div class="box-content">
-          <label for="toggleInfo" class="info-bt-link">
-            <svg class="info-bt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
-              <path
-                d="M48 80a48 48 0 1 1 96 0A48 48 0 1 1 48 80zM0 224c0-17.7 14.3-32 32-32l64 0c17.7 0 32 14.3 32 32l0 224 32 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 512c-17.7 0-32-14.3-32-32s14.3-32 32-32l32 0 0-192-32 0c-17.7 0-32-14.3-32-32z" />
-            </svg>
-          </label>
-          <div class="box-container-Num">99</div>
-          <div class="box-container-txt">Number of Laptops</div>
+      <div class="box-container">
+        <div class="box-item">
+          <div class="box-content">
+            <div class="info-bt-container">
+              <svg class="info-bt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
+                <path fill="white"
+                  d="M48 80a48 48 0 1 1 96 0A48 48 0 1 1 48 80zM0 224c0-17.7 14.3-32 32-32l64 0c17.7 0 32 14.3 32 32l0 224 32 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 512c-17.7 0-32-14.3-32-32s14.3-32 32-32l32 0 0-192-32 0c-17.7 0-32-14.3-32-32z" />
+              </svg>
+            </div>
+            <div class="box-container-Num">99</div>
+            <div class="box-container-txt">Number of Laptop</div>
+          </div>
         </div>
       </div>
 
-      <div>
-        <div class="box-content">
-          <div class="box-container-Num">99</div>
-          <div class="box-container-txt">Number of Desktops</div>
+      <div class="box-container">
+        <div class="box-item">
+            <div class="box-content">
+                <div class="info-bt-container" onclick="openModal()">
+                    <svg class="info-bt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
+                        <path fill="white"
+                            d="M48 80a48 48 0 1 1 96 0A48 48 0 1 1 48 80zM0 224c0-17.7 14.3-32 32-32l64 0c17.7 0 32 14.3 32 32l0 224 32 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 512c-17.7 0-32-14.3-32-32s14.3-32 32-32l32 0 0-192-32 0c-17.7 0-32-14.3-32-32z" />
+                    </svg>
+                </div>
+    
+                <div class="box-container-Num">99</div>
+                <div class="box-container-txt">Number of </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- MODAL  -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Information</h2>
+            <p>This is the details about the device parts.</p>
+        </div>
+    </div>
+    
+      <div class="box-container">
+        <div class="box-item">
+          <div class="box-content">
+            <div class="info-bt-container">
+              <svg class="info-bt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
+                <path fill="white"
+                  d="M48 80a48 48 0 1 1 96 0A48 48 0 1 1 48 80zM0 224c0-17.7 14.3-32 32-32l64 0c17.7 0 32 14.3 32 32l0 224 32 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 512c-17.7 0-32-14.3-32-32s14.3-32 32-32l32 0 0-192-32 0c-17.7 0-32-14.3-32-32z" />
+              </svg>
+            </div>
+            <div class="box-container-Num">99</div>
+            <div class="box-container-txt">Number of Device Parts</div>
+          </div>
         </div>
       </div>
 
-      <div>
-        <div class="box-content">
-          <div class="box-container-Num">99</div>
-          <div class="box-container-txt">Number of Accessories</div>
-        </div>
-      </div>
-
-      <div>
-        <div class="box-content">
-          <div class="box-container-Num">99</div>
-          <div class="box-container-txt">Number of Device Parts</div>
+      <div class="box-container">
+        <div class="box-item">
+          <div class="box-content">
+            <div class="info-bt-container">
+              <svg class="info-bt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
+                <path fill="white"
+                  d="M48 80a48 48 0 1 1 96 0A48 48 0 1 1 48 80zM0 224c0-17.7 14.3-32 32-32l64 0c17.7 0 32 14.3 32 32l0 224 32 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 512c-17.7 0-32-14.3-32-32s14.3-32 32-32l32 0 0-192-32 0c-17.7 0-32-14.3-32-32z" />
+              </svg>
+            </div>
+            <div class="box-container-Num">99</div>
+            <div class="box-container-txt">Number of Device Parts</div>
+          </div>
         </div>
       </div>
     </div>
@@ -130,125 +158,19 @@
               <td>3 years, 1 months, 2 weeks, 2 days</td>
               <td>7KJ2PH3</td>
               <td>New Laptop Dell (Mat Black)</td>
-              <td>1NK Center</td>
-            </tr>
+              <td>
+                <select title="employee">
+                  <option>1NK Center</option>
+                  <option>2nd Office</option>
+                  <option>Warehouse</option>
+                </select>
+              </td>
+        </tr>
           </table>
         </div>
       </div>
     </div>
 
-
-    <!--2nd TABLE FOR ADD LAPTOP-->
-    <section class="table-add-laptop">
-      <div class="parent-container">
-        <div class="dashboard-card">
-          <div class="table-container">
-            <table id="laptop-table" border="1">
-
-              <h2>Laptop Table</h2>
-              <button id="open-modal" class="add-button">+ Add New Laptop</button>
-
-              <div class="popup-form"></div>
-              <div class="fillup-form">
-                <button class="close-btn" id="close-modal">&times;</button>
-                <h2>Add Laptop</h2>
-                <label for="employee">Employee Name:</label>
-                <input type="text" id="employee" placeholder="Enter name">
-
-                <label for="device">Device Name:</label>
-                <input type="text" id="device" placeholder="Enter device">
-
-                <label for="serial">Serial Number:</label>
-                <input type="text" id="serial" placeholder="Enter serial">
-
-                <label for="purchase-date">Purchase Date:</label>
-                <input type="date" id="purchase-date">
-
-                <div class="button-container">
-                  <button class="cancel" id="cancel-modal">Cancel</button>
-                  <button class="save">Save</button>
-
-                </div>
-              </div>
-          </div>
-
-          <tr>
-            <th>Laptop ID</th>
-            <th>Name</th>
-            <th>Purchased Date</th>
-            <th>Laptop Age</th>
-            <th>Serial Number</th>
-            <th>Description</th>
-            <th>Location</th>
-            <th>Assigned Personnel</th>
-            <th>Assigned Personnel (Employment Date)</th>
-            <th>Assigned Personnel (Employment Period)</th>
-            <th>Total Duration (6 Years To Grant Laptop)</th>
-            <th>Total Duration (6 Years To Grant Next Laptop)</th>
-            <th>Granted Laptop</th>
-            <th>Granted 2nd Laptop</th>
-            <th>Last Time Granted Laptop</th>
-            <th>Duration of Last Time Granted Laptop (as of today)</th>
-            <th>Condition</th>
-            <th>Inspection Frequency</th>
-            <th>Inspected By</th>
-            <th>Actions</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Dell Inspiron 3501 Series</td>
-            <td data-date="2021-12-20">December 20, 2021</td>
-            <td class="calculate-duration"></td>
-            <td>7KJ2PH3</td>
-            <td>New Laptop Dell (Mat Black)</td>
-            <td>
-              <select title="employee">
-                <option>1NK Center</option>
-                <option>2nd Office</option>
-                <option>Warehouse</option>
-              </select>
-            </td>
-            <td>
-              <select title="employee">
-                <option>Sir Benjie</option>
-                <option>Ma'am Bev</option>
-                <option>Cedric Lunar</option>
-                <option>Kimm Carl Buban</option>
-                <option>Jhomark Alber</option>
-                <option>Justmyr Rodriguez</option>
-                <option>Raymart Castillo</option>
-                <option>John Kenneth Fajiculay</option>
-                <option>Cheli Ann</option>
-              </select>
-            </td>
-            <td data-date="2018-09-01">September 1, 2018</td>
-            <td class="calculate-duration" data-date="2018-09-01"></td>
-            <td>9 years, 6 months, 0 weeks, 6 days</td>
-            <td></td>
-            <td onclick="toggleBoolean(this)">FALSE</td>
-            <td onclick="toggleBoolean(this)">FALSE</td>
-            <td></td>
-            <td class="calculate-duration" data-date=""></td>
-            <td onclick="toggleBoolean(this)">Working</td>
-            <td>Quarterly</td>
-            <td>
-              <select title="employee">
-                <option>Cedric Lunar</option>
-                <option>Kimm Carl Buban</option>
-                <option>Jhomark Alber</option>
-                <option>Justmyr Rodriguez</option>
-                <option>Raymart Castillo</option>
-                <option>John Kenneth Fajiculay</option>
-                <option>Cheli Ann</option>
-              </select>
-            </td>
-            <td>
-              <button id="tbl-edt-btn" class="edit-btn" onclick="editRow(this)">Edit</button>
-              <button id="tbl-dlt-btn" class="delete-btn" onclick="deleteRow(this)">Delete</button>
-            </td>
-          </tr>
-
-        </table>
         </div>
 
       </div>
