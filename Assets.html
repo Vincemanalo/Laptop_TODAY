@@ -73,14 +73,23 @@
             <form id="laptop-form" class="fillup-form">
               <button type="button" class="close-btn" id="close-modal" onclick="closeModal()">×</button>
               <h2>Add Laptop</h2>
-              <label for="employee">Employee Name:</label>
-              <input type="text" id="employee" placeholder="Enter name" required>
-              <label for="device">Device Name:</label>
-              <input type="text" id="device" placeholder="Enter device" required>
-              <label for="serial">Serial Number:</label>
-              <input type="text" id="serial" placeholder="Enter serial" required>
+              <label for="employee">Device Name:</label>
+              <input type="text" id="Device" placeholder="Enter Device Name" required>
               <label for="purchase-date">Purchase Date:</label>
               <input type="date" id="purchase-date" required>
+              <label for="Age">Laptop Age:</label>
+              <input type="number" id="deviceAge" placeholder="Enter Device Age" required>
+              <label for="serial">Serieal Number:</label>
+              <input type="text" id="device" placeholder="Enter Device Serial" required>
+              <label for="description">Description:</label>
+              <input type="text" id="description" name="description" maxlength="50" size="20" placeholder="Description">
+              <label for="employee">Employee Location</label>
+              <select id="employee" title="employee">
+                <option value="1NK Center">1NK Center</option>
+                <option value="2nd Office">2nd Office</option>
+                <option value="Warehouse">Warehouse</option>
+              </select>            
+
 
               <div class="button-container">
                 <button class="cancel" type="button" id="cancel-modal" onclick="closeModal()">Cancel</button>
@@ -100,20 +109,13 @@
                   <th>Location</th>
                   <th>Assigned Personnel</th>
                   <th>Assigned Personnel (Employment Date)</th>
-                  <th>Assigned Personnel (Employment Period)</th>
-                  <th>Total Duration (6 Years To Grant Laptop)</th>
-                  <th>Total Duration (6 Years To Grant Next Laptop)</th>
-                  <th>Granted Laptop</th>
-                  <th>Granted 2nd Laptop</th>
-                  <th>Last Time Granted Laptop</th>
-                  <th>Duration of Last Time Granted Laptop (as of today)</th>
                   <th>Condition</th>
                   <th>Inspection Frequency</th>
                   <th>Inspected By</th>
                   <th>Actions</th>
                 </tr>
                 <tr>
-                  <td>1</td>
+                  <td onclick="tableModal">1</td>
                   <td>Dell Inspiron 3501 Series</td>
                   <td data-date="2021-12-20">December 20, 2021</td>
                   <td class="calculate-duration"></td>
@@ -139,18 +141,11 @@
                       <option>Cheli Ann</option>
                     </select>
                   </td>
-                  <td data-date="2018-09-01">September 1, 2018</td>
-                  <td class="calculate-duration" data-date="2018-09-01"></td>
-                  <td>9 years, 6 months, 0 weeks, 6 days</td>
-                  <td></td>
-                  <td onclick="toggleBoolean(this)">FALSE</td>
-                  <td onclick="toggleBoolean(this)">FALSE</td>
-                  <td></td>
                   <td class="calculate-duration" data-date=""></td>
                   <td onclick="toggleBoolean(this)">Working</td>
                   <td>Quarterly</td>
                   <td>
-                    <select title="employee">
+                    <select title="employee" class="optionBar">
                       <option>Cedric Lunar</option>
                       <option>Kimm Carl Buban</option>
                       <option>Jhomark Alber</option>
@@ -166,11 +161,22 @@
                   </td>
                 </tr>
 
-                
               </thead>
               <tbody>
               </tbody>
             </table>
+
+            <!--
+            <div id="myModal" class="TableModal">
+              <div class="modal-content">
+                  <span class="close" onclick="closeModal()">&times;</span>
+                  <h2>Row Details</h2>
+                  <p><strong>ID:</strong> <span id="modalId"></span></p>
+                  <p><strong>Name:</strong> <span id="modalName"></span></p>
+                  <p><strong>Age:</strong> <span id="modalAge"></span></p>
+              </div>
+          </div>  -->
+            
           </div>
         </div>
       </div>
@@ -183,6 +189,7 @@
   </footer>
 
   <script src="MainHome.js"></script>
+  <script src="Assets.js"></script>
   <script>
     function toggleSidebar() {
       let sidebar = document.getElementById("sidebar");

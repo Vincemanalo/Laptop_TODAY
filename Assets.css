@@ -277,8 +277,9 @@ th {
 }
 
 th, td {
-    border: none;
-    padding: 10px;
+  border-top: 1px solid rgb(145, 145, 145);
+  border-left: 1px solid rgb(145, 145, 145);
+  padding: 10px;
 }
 
 tr:nth-child(odd) {
@@ -290,13 +291,8 @@ tr:nth-child(even) {
 }
 
 tr:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-    transition: background 0.3s ease-in-out;
-}
-
-td:hover {
-    background-color: var(--hover-row, rgba(0, 0, 0, 0.1));
-    transition: background 0.3s ease-in-out;
+  background-color: var(--hover-row, rgba(252, 68, 68, 0.1));
+  transition: background 0.3s ease-in-out;
 }
 
 td:first-child, th:first-child {
@@ -507,72 +503,79 @@ td:last-child, th:last-child {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1000;
-  }
-  .popup-form.active {
+}
+.popup-form.active {
     display: block;
-  }
-  .fillup-form {
+}
+.fillup-form {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: #fff;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    z-index: 1001;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
     width: 90%;
-    max-width: 400px;
+    max-width: 100%;
     text-align: center;
-  }
-  .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    font-family: Arial, sans-serif;
+}
+.fillup-form.active {
+    display: block;
+}
+.fillup-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
     font-size: 24px;
+}
+.fillup-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.fillup-form input {
+    width: 15rem;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.button-container button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.save {
+    background: #007bff;
+    color: white;
+}
+.cancel {
+    background: #dc3545;
+    color: white;
+}
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 28px;
     cursor: pointer;
     background: none;
     border: none;
-  }
-.fillup-form.active {
-    display: block;
-  }
-  .fillup-form h2 {
-    margin-bottom: 15px;
-    text-align: center;
-  }
-  .fillup-form label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  .fillup-form input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  .button-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-  }
-  .button-container button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .save {
-    background: #007bff;
-    color: white;
-  }
-  .cancel {
-    background: #dc3545;
-    color: white;
-  }
+}
+
   
     /* Footer */
     footer {
