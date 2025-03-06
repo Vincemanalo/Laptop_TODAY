@@ -20,7 +20,7 @@
     </div>
   </header>
 
-  <div class="sidebar" id="sidebar">
+  <div class="sidebar open" id="sidebar">
     <div class="sidebar-header">
       <img src="RecreatedFIGMAlogo.PNG" alt="Company Icon" class="company-icon">
       <button id="close-btn" class="close-btn" style="font-size: 200%;" onclick="closeSidebar()">☰</button>
@@ -89,50 +89,20 @@
                 <tr>
                   <th>Laptop ID</th>
                   <th>Name</th>
-                  <th>Purchased Date</th>
-                  <th>Laptop Age</th>
                   <th>Serial Number</th>
                   <th>Description</th>
-                  <th>Location</th>
                   <th>Assigned Personnel</th>
-                  <th>Assigned Personnel (Employment Date)</th>
-                  <th>Condition</th>
-                  <th>Inspection Frequency</th>
-                  <th>Inspected By</th>
                   <th>Actions</th>
                 </tr>
                 <tr>
                   <td onclick="tableModal">1</td>
                   <td>Dell Inspiron 3501 Series</td>
-                  <td data-date="2021-12-20">December 20, 2021</td>
-                  <td class="calculate-duration"></td>
                   <td>7KJ2PH3</td>
                   <td>New Laptop Dell (Mat Black)</td>
                   <td>
                     <select title="employee">
-                      <option>1NK Center</option>
-                      <option>2nd Office</option>
-                      <option>Warehouse</option>
-                    </select>
-                  </td>
-                  <td>
-                    <select title="employee">
                       <option>Sir Benjie</option>
                       <option>Ma'am Bev</option>
-                      <option>Cedric Lunar</option>
-                      <option>Kimm Carl Buban</option>
-                      <option>Jhomark Alber</option>
-                      <option>Justmyr Rodriguez</option>
-                      <option>Raymart Castillo</option>
-                      <option>John Kenneth Fajiculay</option>
-                      <option>Cheli Ann</option>
-                    </select>
-                  </td>
-                  <td class="calculate-duration" data-date=""></td>
-                  <td onclick="toggleBoolean(this)">Working</td>
-                  <td>Quarterly</td>
-                  <td>
-                    <select title="employee" class="optionBar">
                       <option>Cedric Lunar</option>
                       <option>Kimm Carl Buban</option>
                       <option>Jhomark Alber</option>
@@ -160,26 +130,23 @@
         <form id="laptop-form" class="fillup-form">
           <button type="button" class="close-btn" id="close-modal" onclick="closeModal()">×</button>
           <h2>Laptop Details</h2>
+
           <div class="form-grid">
             <div class="form-group">
               <label for="device">Device Name</label>
               <input type="text" id="device" placeholder="Enter Device Name" required>
             </div>
             <div class="form-group">
-              <label for="purchase-date">Purchase Date</label>
-              <input type="date" id="purchase-date" required>
-            </div>
-            <div class="form-group">
-              <label for="deviceAge">Laptop Age</label>
-              <input type="number" id="deviceAge" placeholder="Enter Device Age" min="0" required>
-            </div>
-            <div class="form-group">
               <label for="serial">Serial Number</label>
               <input type="text" id="serial" placeholder="Enter Device Serial" required>
             </div>
-            <div class="form-group full-width">
+            <div class="form-group">
               <label for="description">Description</label>
-              <input type="text" id="description" name="description" maxlength="50" placeholder="Description">
+              <input type="text" id="description" name="description" placeholder="Description">
+            </div>
+            <div class="form-group">
+              <label for="purchase-date">Purchase Date</label>
+              <input type="date" id="purchase-date" required>
             </div>
             <div class="form-group">
               <label for="location">Location</label>
@@ -205,8 +172,7 @@
               <label for="condition">Condition</label>
               <select id="condition">
                 <option value="Brand New">Brand New</option>
-                <option value="Working">Working</option>
-                <option value="Broken">Broken</option>
+                <option value="Working">Used</option>
               </select>
             </div>
             <div class="form-group">
@@ -228,13 +194,16 @@
                 <option>Raymart Castillo</option>
                 <option>John Kenneth Fajiculay</option>
                 <option>Cheli Ann</option>
+                <option> Add Employee</option>
               </select>
             </div>
           </div>
+
           <div class="button-container">
             <button class="cancel" type="button" id="cancel-modal" onclick="closeModal()">Cancel</button>
             <button class="save" type="submit">Save</button>
           </div>
+
         </form>
       </div>
     </div>

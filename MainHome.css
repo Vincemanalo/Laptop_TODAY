@@ -124,7 +124,7 @@ header {
 }
 
 .sidebar.open {
-    left: 0;
+    left: 0 !important;
 }
 
 .sidebar.close {
@@ -147,7 +147,7 @@ header {
 }
 
 .sidebar.open + #main-content {
-    margin-left: 250px;
+    margin-left: 250px !important;
 }
 
 .sidebar.close + #main-content {
@@ -194,14 +194,14 @@ header {
 }
 
 .sidebar ul li a.active {
-    background: #ddd;
-    color: #3674B5;
+    background: #ff3333;
+    color: #000000;
     font-weight: bold;
-    border-left: 4px solid #3674B5;
+    border-left: 4px solid #ff3333;
   }
   
 .sidebar ul li a:hover {
-    background: #ddd;
+    background:  #808080;
 }
 
 /* Dropdown Menu */
@@ -209,8 +209,14 @@ header {
 .navoptions{
     display: flex;
     align-items: center;
-    gap: 15px; /* Adjust spacing between elements */
+    gap: 15px;
 }
+
+.navoption a.active {
+    background: #ff3333;
+    border-radius: 5px;
+}
+
 
 
 #ChevDown,
@@ -356,19 +362,6 @@ table {
   tr:hover td {
     background-color: var(--hover-row, rgba(252, 68, 68, 0.1));
     transition: background 0.3s ease-in-out;
-  }
-  
-  
-  td:first-child,
-  th:first-child {
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-  }
-  
-  td:last-child,
-  th:last-child {
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
   }
   
   @media (max-width: 768px) {
